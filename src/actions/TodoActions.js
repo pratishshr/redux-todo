@@ -9,6 +9,9 @@ import actionTypeConstants from '../constants/actionTypeConstants';
 // Util
 import {httpUtil} from '../utils';
 
+// Libraries
+import Toastr from 'toastr';
+
 export function requestTodo() {
   return {
     type: actionTypeConstants.REQUEST_TODO
@@ -42,6 +45,7 @@ export function fetchTodos() {
       dispatch(listTodos(response.data.data));
       dispatch(responseTodo());
     }).catch((err) => {
+      Toastr.error(err.message)
       dispatch(responseTodo());
     });
   }
