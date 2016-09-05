@@ -14,7 +14,7 @@ let initialState = Immutable.Map({
   todos: []
 });
 
-export default function databaseReducer(state = initialState, action) {
+export default function todoReducer(state = initialState, action) {
   switch (action.type) {
     case actionTypeConstants.LIST_TODOS:
       return state.set('todos', action.data);
