@@ -11,5 +11,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import routes from './routes';
+import configureStore from './store/configureStore';
+import {Provider} from 'react-redux';
 
-ReactDOM.render(routes, document.querySelector('#app-container'));
+const store = configureStore();
+
+ReactDOM.render(
+  <Provider store={store}>
+    {routes}
+  </Provider>, document.querySelector('#app-container'));
