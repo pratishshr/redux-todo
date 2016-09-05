@@ -45,7 +45,7 @@ export function fetchTodos() {
       dispatch(listTodos(response.data.data));
       dispatch(responseTodo());
     }).catch((err) => {
-      Toastr.error(err.message)
+      Toastr.error(err.message);
       dispatch(responseTodo());
     });
   }
