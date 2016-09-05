@@ -10,7 +10,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: [
-    'webpack-dev-server/client?http://localhost:8080', // WebpackDevServer host and port
+    'webpack-dev-server/client?http://localhost:1234', // WebpackDevServer host and port
     'webpack/hot/only-dev-server', // 'only' prevents reload on syntax errors
     __dirname + '/src/index.js'
   ],
@@ -27,6 +27,7 @@ module.exports = {
       {test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/, loader: 'file-loader', query: {name: 'fonts/[name].[ext]'}},
     ]
   },
+  devtool: 'eval-source-map',
   devServer: {
     hot: true,
     historyApiFallback: true,
