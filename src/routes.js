@@ -23,7 +23,7 @@ let routes = (
       <IndexRoute component={Dashboard}/>
       <Route path="/todos" component={Todo}>
         <IndexRoute component={TodoList}/>
-        <Route path="/add" component={TodoForm}/>
+        <Route path="add" component={TodoForm}/>
         <Route path=":todoId/update" component={TodoForm}/>
       </Route>
     </Route>

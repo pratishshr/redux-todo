@@ -39,7 +39,7 @@ class TodoList extends Component {
         <div className="page-header">
           <h1>Todo List</h1>
         </div>
-        <Link to="/add" className="btn btn-primary pull-right">
+        <Link to="/todos/add" className="btn btn-primary pull-right">
           Add Item
         </Link>
         <div className="clearfix"></div>
